@@ -3,7 +3,6 @@
 echo "*** COMPILE STARTING ***"
 BUILD_DIR=$1
 CACHE_DIR=$2
-BUILD_PACK_DIR=$(dirname $(dirname $0))
 
 echo "Checking make version..."
 make --version
