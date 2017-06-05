@@ -4,9 +4,11 @@
 echo "*** COMPILE STARTING ***"
 BUILD_DIR=$1
 CACHE_DIR=$2
+APP_HOME=/app
+PG_HOME=$APP_HOME/pg_home
 
-mkdir -p $APP_HOME/postgres
-curl 'https://ftp.postgresql.org/pub/source/v9.6.3/postgresql-9.6.3.tar.gz' -o - | tar xzf - -C $APP_HOME/postgres
+mkdir -p $PG_HOME
+curl 'https://ftp.postgresql.org/pub/source/v9.6.3/postgresql-9.6.3.tar.gz' -o - | tar xzf - -C $PG_HOME
 
 echo "Creating start script"
 cat > "$BUILD_DIR/start.sh" <<EOF
