@@ -18,10 +18,10 @@ echo "Configuring Postgres build..."
 $APP_HOME/pg_home/postgresql-9.6.3/configure
 
 echo "Building Postgres client components..."
-$APP_HOME/pg_home/postgresql-9.6.3/make -C src/bin install
-$APP_HOME/pg_home/postgresql-9.6.3/make -C src/include install
-$APP_HOME/pg_home/postgresql-9.6.3/make -C src/interfaces install
-$APP_HOME/pg_home/postgresql-9.6.3/make -C doc install
+make -C src/bin install
+make -C src/include install
+make -C src/interfaces install
+make -C doc install
 
 echo "Creating start script"
 cat > "$BUILD_DIR/start.sh" <<EOF
