@@ -12,16 +12,16 @@ mkdir -p $PG_HOME
 curl "https://ftp.postgresql.org/pub/source/v9.6.3/postgresql-9.6.3.tar.gz" -o - | tar xzf - -C $PG_HOME
 
 mv -f -v $PG_HOME $APP_HOME
-ls -l $APP_HOME/pg_home/postgresql-9.6.3
+# ls -l $APP_HOME/pg_home/postgresql-9.6.3
 
 echo "Configuring Postgres build..."
-# $APP_HOME/configure
+$APP_HOME/pg_home/postgresql-9.6.3/configure
 
 echo "Building Postgres client components..."
-# $APP_HOME/pg_home/make -C src/bin install
-#$APP_HOME/make -C src/include install
-#$APP_HOME/make -C src/interfaces install
-#$APP_HOME/make -C doc install
+$APP_HOME/pg_home/postgresql-9.6.3/make -C src/bin install
+$APP_HOME/pg_home/postgresql-9.6.3/make -C src/include install
+$APP_HOME/pg_home/postgresql-9.6.3/make -C src/interfaces install
+$APP_HOME/pg_home/postgresql-9.6.3/make -C doc install
 
 echo "Creating start script"
 cat > "$BUILD_DIR/start.sh" <<EOF
