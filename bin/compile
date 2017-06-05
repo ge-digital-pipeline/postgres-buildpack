@@ -7,4 +7,5 @@ $stdout.sync = true
 build_path = ARGV[0]
 cache_path = ARGV[1]
 
-%x(make --version)
+#{ }%x(make --version)
+system("make --version")
