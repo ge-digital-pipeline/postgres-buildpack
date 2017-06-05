@@ -7,15 +7,4 @@ $stdout.sync = true
 build_path = ARGV[0]
 cache_path = ARGV[1]
 
-install_ruby
-
-private
-
-def install_ruby
-  puts "Installing Ruby"
-
-  %x(make --version)
-  # !!! build tasks go here !!!
-  # download ruby 
-  # install ruby
-end
+%x(make --version)
