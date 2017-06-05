@@ -12,7 +12,7 @@ mkdir -p $PG_HOME
 curl "https://ftp.postgresql.org/pub/source/v9.6.3/postgresql-9.6.3.tar.gz" -o - | tar xzf - -C $PG_HOME
 
 mv -f -v $PG_HOME $APP_HOME
-ls -l $APP_HOME
+ls -l $APP_HOME/pg_home
 
 echo "Configuring Postgres build..."
 # $APP_HOME/configure
