@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
-echo "**** WELCOME ****"
+echo "*** COMPILE STARTING ***"
 BUILD_DIR=$1
 CACHE_DIR=$2
 BUILD_PACK_DIR=$(dirname $(dirname $0))
+
+echo 'Checking make version...'
+make --version
 
 echo "Creating start script"
 cat > "$BUILD_DIR/start.sh" <<EOF
