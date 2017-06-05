@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 
-echo "Checking make version..."
-make --version
-
 if [ -f $1/cache-test.txt ]; then
   echo "CACHETEST" && exit 0
 else
