@@ -7,9 +7,9 @@ CACHE_DIR=$2
 APP_HOME=/app
 PG_HOME=$APP_HOME/pg_home
 
-echo 'Unzipping postgres to $PG_HOME...'
+echo "Unzipping postgres to $PG_HOME..."
 mkdir -p $PG_HOME
-curl 'https://ftp.postgresql.org/pub/source/v9.6.3/postgresql-9.6.3.tar.gz' -o - | tar xzf - -C $PG_HOME
+curl "https://ftp.postgresql.org/pub/source/v9.6.3/postgresql-9.6.3.tar.gz" -o - | tar xzf - -C $PG_HOME
 
 echo "Creating start script"
 cat > "$BUILD_DIR/start.sh" <<EOF
