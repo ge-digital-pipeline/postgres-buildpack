@@ -4,7 +4,7 @@
 echo "*** COMPILE STARTING ***"
 BUILD_DIR=$1
 CACHE_DIR=$2
-APP_HOME=/app
+APP_HOME=/home/vcap/app
 PG_HOME=$APP_HOME/pg_home
 
 echo "Unzipping postgres to $PG_HOME..."
